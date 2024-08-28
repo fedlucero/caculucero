@@ -19,6 +19,145 @@ a {
     z-index: 10;
   }
 
+    /* Inicio Carrusel */
+
+.carousel {
+  margin-top: 11vh;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1
+;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  margin-left:10px ;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: auto;
+  height: 60vh;
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* fin carrusel */
+
+/* inicio gallery */
+
+
+.gallery {
+  margin-top: 9vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas flexibles */
+  gap: 10px; /* Espacio entre las imágenes */
+  padding: 10px;
+}
+
+.gallery-item {
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  height: 40vh; /* Establece una altura fija para los elementos de la galería */
+}
+
+.gallery-item img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Recorta la imagen para llenar el contenedor sin deformarse */
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Fin gallery */
+
+ /* Mapa */
+
+ .contenedorMapa{
+  margin-top: 10vh;
+  width: 80vw;
+  height: 100vh;
+  background-color: aqua;
+  z-index: 1;
+ }
+
+.map {
+ 
+  width: 100%;
+}
+#map {
+  height: 100%; 
+
+}
+
+/* Fin mapa */
+
+/* Form */
+
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #253228;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#52d89e;
+}
+
+/* Fin Form */
+
+
   /* Extra small devices (phones, 500px and down) */
 
 @media only screen and (max-width: 500px) {
@@ -67,6 +206,19 @@ a {
                 object-fit: cover;
         
             }
+            .form{
+              margin: auto;
+              width: 90vw;
+              margin-top: 10vh;
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+              
+            }
+
+         
+
 
 }
 /* Extra small devices (phones, 500px and up) */
@@ -112,6 +264,18 @@ a {
         
             }
 
+            .form{
+              margin: auto;
+              width: 90vw;
+              margin-top: 10vh;
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+              
+            }
+            
+
 }
 /* Extra small devices (phones, 1024) */
 @media only screen and (min-width: 1024px) { 
@@ -152,104 +316,20 @@ a {
 
     }
 
+    .form{
+      margin: auto;
+      width: 80vw;
+      margin-top: 10vh;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+      
+    }
+
 }
 
 #menu.scrolled {
     background-color: #9da0a3; /* Color del menú después del scroll */
   }
 
-  /* Inicio Carrusel */
-
-.carousel {
-    margin-top: 11vh;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    z-index: 1
-;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item {
-    margin-left:10px ;
-    box-sizing: border-box;
-  }
-  
-  .carousel-item img {
-    width: auto;
-    height: 60vh;
-    display: block;
-  }
-  
-  .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 100;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-
-  /* fin carrusel */
-
-  /* inicio gallery */
-  
-
-  .gallery {
-    margin-top: 9vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas flexibles */
-    gap: 10px; /* Espacio entre las imágenes */
-    padding: 10px;
-  }
-  
-  .gallery-item {
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
-    height: 40vh; /* Establece una altura fija para los elementos de la galería */
-  }
-  
-  .gallery-item img {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor sin deformarse */
-    display: block; /* Elimina el espacio debajo de la imagen */
-  }
-
-  /* Fin gallery */
-
-   /* Mapa */
-
-   .contenedorMapa{
-    margin-top: 10vh;
-    width: 80vw;
-    height: 100vh;
-    background-color: aqua;
-    z-index: 1;
-   }
-
-  .map {
-   
-    width: 100%;
-}
-#map {
-    height: 100%; 
-
-}
-
- /* Fin mapa */
