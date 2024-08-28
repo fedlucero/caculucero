@@ -232,3 +232,24 @@ a {
   }
 
   /* Fin gallery */
+
+   /* Mapa */
+
+   .contenedorMapa{
+    margin-top: 10vh;
+    width: 80vw;
+    height: 100vh;
+    background-color: aqua;
+    z-index: 1;
+   }
+
+  .map {
+   
+    width: 100%;
+}
+#map {
+    height: 100%; 
+
+}
+
+ /* Fin mapa */
