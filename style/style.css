@@ -4,13 +4,20 @@
   padding: 0;
   box-sizing: border-box; }
 
+  :root {
+    --main-color: #3D5A80;
+    --secondary-color: #98C1D9;
+    --last-color: #E0FBFC;
+  }
+
 html {
   font-family: 'Noto Sans JP', sans-serif; }
 
 body {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-color: var(--last-color); }
 
 a {
   text-decoration: none; }
@@ -184,7 +191,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto 10vw;
+  padding: 10vw;
+  background-color: var(--secondary-color);
 }
 
 .imagenCard img {
@@ -283,12 +291,12 @@ button:hover {
 }
 
 .textoCard{
-  width: 80vw;
+  width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10vw;
+  
 }
 
 .imagenCard img {
@@ -355,6 +363,48 @@ button:hover {
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
               
             }
+
+            /* Inicio Cards*/
+.ContainerCards {
+  width: 100vw;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card:nth-child(2){
+  flex-direction: column-reverse;
+}
+
+.imagenCard{
+  width: 90%;
+  height: auto;
+}
+
+.textoCard{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.imagenCard img {
+  width: 80vw;
+  margin: 5vh;
+}
+
+/* Fin cards*/ 
             
 
 }
@@ -408,9 +458,52 @@ button:hover {
       
     }
 
+    /* Inicio Cards*/
+.ContainerCards {
+  width: 100vw;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.imagenCard{
+  width: 50%;
+  height: auto;
+}
+
+.textoCard{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vw;
+  background-color: var(--secondary-color);
+}
+
+.imagenCard img {
+  width: 40vw;
+  margin: 10vh;
+}
+
+.card:nth-child(2){
+  flex-direction: row;
+}
+/* Fin cards*/
+    
+
 }
 
 #menu.scrolled {
-    background-color: #9da0a3; /* Color del menú después del scroll */
+    background-color: var(--main-color) /* Color del menú después del scroll */
   }
 
