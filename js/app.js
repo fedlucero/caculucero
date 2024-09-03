@@ -19,32 +19,47 @@ function myFunction() {
       }
     }
 
-    let currentIndex = 0;
+   
 
     //Carusel
 
-function showSlide(index) {
-  const slides = document.querySelectorAll('.carousel-item');
-  if (index >= slides.length) {
-    currentIndex = 0;
-  } else if (index < 0) {
-    currentIndex = slides.length - 1;
-  } else {
-    currentIndex = index;
-  }
-  
-  const offset = -currentIndex * 100;
-  document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
+    let currentIndex = 0;
 
-function nextSlide() {
-  showSlide(currentIndex + 1);
-}
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.carousel-item');
+      const totalSlides = slides.length;
+      console.log(totalSlides);
+      console.log("pepe");
+      console.log("Hola, mundo!");
 
-function prevSlide() {
-  showSlide(currentIndex - 1);
-}
+      
 
+    
+      // Ajusta el índice actual para que sea cíclico
+      if (index >= totalSlides) {
+        currentIndex = 0; // Vuelve a la primera imagen
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1; // Va a la última imagen
+      } else {
+        currentIndex = index;
+      }
+    
+      // Calcula el desplazamiento en porcentaje
+      const offset = -currentIndex * 55;
+      document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    }
+    
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+    
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+    
+    // Configura el carrusel para que avance automáticamente
+    setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
+    
 //Color menu
 // script.js
 
@@ -79,4 +94,5 @@ document.addEventListener('DOMContentLoaded', function () {
   addTourLocation(41.385064, 2.173404, 'Barcelona', 'Gira en Barcelona: 5 de Octubre 2024');
   addTourLocation(48.856613, 2.352222, 'París', 'Gira en París: 10 de Octubre 2024');
 });
+
 

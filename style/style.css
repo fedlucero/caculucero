@@ -157,6 +157,45 @@ button:hover {
 
 /* Fin Form */
 
+/* Inicio Cards*/
+.ContainerCards {
+  width: 100vw;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+.imagenCard{
+  width: 50%;
+  height: auto;
+}
+
+.textoCard{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 10vw;
+}
+
+.imagenCard img {
+  width: 40vw;
+  margin: 10vh;
+}
+
+/* Fin cards*/
+
+
+
 
   /* Extra small devices (phones, 500px and down) */
 
@@ -216,6 +255,48 @@ button:hover {
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
               
             }
+
+            /* Inicio Cards*/
+.ContainerCards {
+  width: 100vw;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card:nth-child(2){
+  flex-direction: column-reverse;
+}
+
+.imagenCard{
+  width: 90%;
+  height: auto;
+}
+
+.textoCard{
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vw;
+}
+
+.imagenCard img {
+  width: 80vw;
+  margin: 5vh;
+}
+
+/* Fin cards*/
 
          
 
