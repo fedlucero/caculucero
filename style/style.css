@@ -141,9 +141,10 @@ label {
 }
 
 input, textarea {
+  background-color: var(--last-color);
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--last-color);
   border-radius: 4px;
   font-size: 16px;
 }
@@ -152,14 +153,14 @@ button {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #253228;
+  background-color: var(--main-color);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color:#52d89e;
+  background-color:var(--secondary-color);
 }
 
 /* Fin Form */
@@ -257,7 +258,7 @@ button:hover {
               margin: auto;
               width: 90vw;
               margin-top: 10vh;
-              background-color: #fff;
+              background-color:var(--secondary-color);
               padding: 20px;
               border-radius: 8px;
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -451,7 +452,7 @@ button:hover {
       margin: auto;
       width: 80vw;
       margin-top: 10vh;
-      background-color: #fff;
+      background-color: var(--secondary-color);
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
