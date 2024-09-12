@@ -5,10 +5,15 @@
   box-sizing: border-box; }
 
   :root {
-    --main-color: #3D5A80;
-    --secondary-color: #98C1D9;
-    --last-color: #E0FBFC;
+    --main-color: #E6AF2E;
+    --secondary-color: #333333;
+    --last-color: #E0E2DB;
   }
+
+ /*
+  333333
+  191716
+  */
 
 html {
   font-family: 'Noto Sans JP', sans-serif; }
@@ -76,6 +81,11 @@ a {
 
 /* fin carrusel */
 
+footer{
+  height: 15vh;
+  width: 100vw;
+  background-color: var(--secondary-color);
+}
 /* inicio gallery */
 
 
@@ -166,42 +176,173 @@ button:hover {
 /* Fin Form */
 
 /* Inicio Cards*/
-.ContainerCards {
+.containerCards{
+  margin: auto;
   width: 100vw;
   max-width: 1200px;
-  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.card{
+.cardActividades{
   width: 100%;
-  height: 100%;
-  display: flex;
-
-}
-
-.imagenCard{
-  width: 50%;
-  height: auto;
-}
-
-.textoCard{
-  width: 50%;
-  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10vw;
-  background-color: var(--secondary-color);
+}
+.cardActividades h2{
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  font-size: 3rem;
+}
+.actividades{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.imagenCard img {
-  width: 40vw;
-  margin: 10vh;
+.actividades .texto{ 
+ padding: 4vw;
+  width: 50%;
+  text-align: center;
 }
+
+.actividades .imagenCard{
+  height: 30vw;
+  object-fit: cover;
+  width: 50%;
+  border-radius: 1rem;
+}
+.formaciones{
+  margin-bottom: 5vw;
+}
+
+
+
+
+
 
 /* Fin cards*/
+
+  /*cards tango y otros*/
+  @layer reset {
+
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    :where(:not(dialog)) {
+        margin: 0;
+    }
+}
+
+@layer demo {
+    :root {
+        color-scheme: dark;
+        --nav-block-size: 74px;
+    }
+}
+
+@layer components.collections {
+    .section {
+        background-color: black;
+        display: grid;
+        inline-size: 100%;
+        min-block-size: max(600px, calc(100dvb - var(--nav-block-size)));
+        padding-block-end: 0.75rem;
+        padding-inline: 0.75rem;
+        place-items: center;
+        position: relative;
+    }
+
+    .cards {
+        background-color: black;
+        block-size: 100%;
+        display: grid;
+        gap: 1rem;
+        inline-size: 100%;
+
+        @media (width > 1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .card {
+        container-type: size;
+        inline-size: 100%;
+        block-size: 100%;
+        text-decoration: none;
+        min-block-size: 280px;
+        position: relative;
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            inset: 0;
+            mix-blend-mode: multiply;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    .card-1::after {
+        background-color: hsl(343, 98%, 52%);
+    }
+
+    .card-2::after {
+        background-color: hsl(199, 100%, 38%);
+    }
+
+    .card-3::after {
+        background-color: hsl(119, 59%, 64%);
+    }
+
+    .card-4::after {
+        background-color: hsl(49, 83%, 69%);
+    }
+
+    .visual {
+        background-color: black;
+        block-size: 100%;
+        display: grid;
+        inline-size: 100%;
+        overflow: hidden;
+        place-items: center;
+
+        >* {
+            grid-area: 1/1;
+        }
+    }
+
+    .card-img {
+        block-size: 100cqb;
+        inline-size: 100cqi;
+        border-radius: inherit;
+        display: block;
+        background: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
+        filter: grayscale();
+        object-fit: cover;
+    }
+
+    .figcaption {
+        z-index: 2;
+        color: white;
+        font: 400 8cqi / normal system-ui, sans-serif;
+    }
+}
+
+
 
 
 
@@ -266,46 +407,59 @@ button:hover {
             }
 
             /* Inicio Cards*/
-.ContainerCards {
-  width: 100vw;
-  max-width: 1200px;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
 
-.card{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+            .cardActividades{
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .cardActividades h2{
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+              font-size: 3rem;
+              text-align: center;
+            }
+            .actividades{
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
 
-}
+            
+            .tango{
+              flex-direction: column-reverse;
+              
+            }
 
-.card:nth-child(2){
-  flex-direction: column-reverse;
-}
+            .specialWorkshops{
+              flex-direction: column-reverse;
+            }
 
-.imagenCard{
-  width: 90%;
-  height: auto;
-}
+           
 
-.textoCard{
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
 
-.imagenCard img {
-  width: 80vw;
-  margin: 5vh;
-}
+            
+            .actividades .texto{ 
+             padding: 4vw;
+              text-align: center;
+              width: 90vw;
+              margin-bottom: 2rem;
+            }
+            
+            .actividades .imagenCard{
+              
+              object-fit: cover;
+              width: 90vw;
+              
+              border-radius: 1rem;
+            }
 
-/* Fin cards*/
+            /* Fin cards*/
+          
 
          
 
@@ -365,47 +519,59 @@ button:hover {
               
             }
 
-            /* Inicio Cards*/
-.ContainerCards {
-  width: 100vw;
-  max-width: 1200px;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
+            .cardActividades{
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .cardActividades h2{
+              margin-top: 3vw;
+              margin-bottom: 3vw;
+              font-size: 3rem;
+              text-align: center;
+            }
+            .actividades{
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
 
-.card{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+            
+            .tango{
+              flex-direction: column-reverse;
+              
+            }
 
-}
+            .specialWorkshops{
+              flex-direction: column-reverse;
+            }
 
-.card:nth-child(2){
-  flex-direction: column-reverse;
-}
+           
 
-.imagenCard{
-  width: 90%;
-  height: auto;
-}
 
-.textoCard{
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
+            
+            .actividades .texto{ 
+             padding: 4vw;
+              text-align: center;
+              width: 90vw;
+              margin-bottom: 2rem;
+            }
+            
+            .actividades .imagenCard{
+              
+              object-fit: cover;
+              width: 90vw;
+              
+              border-radius: 1rem;
+            }
 
-.imagenCard img {
-  width: 80vw;
-  margin: 5vh;
-}
+          
 
-/* Fin cards*/ 
+
             
 
 }
@@ -459,52 +625,63 @@ button:hover {
       
     }
 
-    /* Inicio Cards*/
-.ContainerCards {
+/* Inicio Cards*/
+.containerCards{
+  margin: auto;
   width: 100vw;
   max-width: 1200px;
-  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.card{
+.cardActividades{
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-
-}
-
-.imagenCard{
-  width: 50%;
-  height: auto;
-}
-
-.textoCard{
-  width: 50%;
-  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10vw;
-  background-color: var(--secondary-color);
 }
-
-.imagenCard img {
-  width: 40vw;
-  margin: 10vh;
+.cardActividades h2{
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  font-size: 3rem;
 }
-
-.card:nth-child(2){
+.actividades{
+  width: 100%;
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-/* Fin cards*/
+
+.actividades .texto{ 
+ padding: 4vw;
+  width: 50%;
+  text-align: center;
+}
+
+.actividades .imagenCard{
+  height: 30vw;
+  object-fit: cover;
+  width: 50%;
+  border-radius: 1rem;
+}
+.formaciones{
+  margin-bottom: 5vw;
+}
+
+   
+
     
+
 
 }
 
 #menu.scrolled {
-    background-color: var(--main-color) /* Color del menú después del scroll */
+    background-color: var(--secondary-color) /* Color del menú después del scroll */
   }
+
+
+  
 
