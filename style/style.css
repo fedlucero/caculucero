@@ -82,7 +82,7 @@ a {
 /* fin carrusel */
 
 footer{
-  height: 15vh;
+  height: 10vh;
   width: 100vw;
   background-color: var(--secondary-color);
 }
@@ -237,20 +237,15 @@ button:hover {
         box-sizing: border-box;
     }
 
-    :where(:not(dialog)) {
-        margin: 0;
-    }
 }
 
-@layer demo {
-    :root {
-        color-scheme: dark;
-        --nav-block-size: 74px;
-    }
-}
+
+
 
 @layer components.collections {
     .section {
+
+        margin-top: 5vw !important;
         background-color: black;
         display: grid;
         inline-size: 100%;
@@ -258,10 +253,11 @@ button:hover {
         padding-block-end: 0.75rem;
         padding-inline: 0.75rem;
         place-items: center;
-        position: relative;
+        /*position: relative;*/
     }
 
     .cards {
+      
         background-color: black;
         block-size: 100%;
         display: grid;
@@ -279,7 +275,7 @@ button:hover {
         block-size: 100%;
         text-decoration: none;
         min-block-size: 280px;
-        position: relative;
+        /*position: relative;*/
 
         &:hover::after {
             opacity: 1;
@@ -351,7 +347,7 @@ button:hover {
 
 @media only screen and (max-width: 500px) {
     header {
-        background-color:transparent;
+        background-color:var(--secondary-color);
         width: 100vw;
         height: 10vh;
         display: flex;
@@ -362,12 +358,12 @@ button:hover {
         box-shadow: 0px 16px 15px -6px rgba(0, 0, 0, 0.41); }
         header h3 {
           margin: 10px;
-          color:#DEE2E6;
+          color:var(--main-color);
           font-size: 1rem; }
         header nav {
           position: absolute;
           top: 10vh;
-          background-color:transparent;
+          background-color:var(--secondary-color);
           width: 100vw;
           display: none;
           flex-direction: column;
@@ -389,12 +385,7 @@ button:hover {
                 height: 100vw;
                 
             }
-        main .bannerHome {
-                width: 100vw;
-                height: 100vh;
-                object-fit: cover;
-        
-            }
+      
             .form{
               margin: auto;
               width: 90vw;
@@ -469,7 +460,7 @@ button:hover {
 
 @media only screen and (min-width: 501px) {
     header {
-        background-color:transparent;
+        background-color:var(--secondary-color);
         width: 100vw;
         height: 10vh;
         display: flex;
@@ -481,7 +472,7 @@ button:hover {
         header .esconder {
           display: none; }
         header h3 {
-            color:#DEE2E6;
+            color:var(--main-color);
           margin-left: 20px;
           font-size: 1.2rem; }
         header nav {
@@ -489,7 +480,7 @@ button:hover {
           margin-right: 20px; }
           header nav a {
             margin-right: 15px;
-            color: #DEE2E6;
+            color:var(--main-color);
             font-size: 1rem;
             transition-timing-function: ease-in;
             transition: .6s; }
@@ -501,12 +492,7 @@ button:hover {
                 height: 100vw;
                 
             }
-        main .bannerHome {
-                width: 100vw;
-                height: 100vh;
-                object-fit: cover;
         
-            }
 
             .form{
               margin: auto;
@@ -578,7 +564,7 @@ button:hover {
 /* Extra small devices (phones, 1024) */
 @media only screen and (min-width: 1024px) { 
     header {
-        background-color:transparent;
+        background-color:var(--secondary-color);
         width: 100vw;
         height: 10vh;
         display: flex;
@@ -592,12 +578,12 @@ button:hover {
         header .esconder {
           display: none; }
         header h3 {
-            color:#DEE2E6;
+            color:var(--main-color);
           font-size: 1.5rem;
           margin-left: 25px; }
         header nav a {
           margin-right: 15px;
-          color:  #DEE2E6;
+          color:  var(--main-color);
           font-size: 1rem;
           transition-timing-function: ease-in;
           transition: .6s; }
@@ -608,11 +594,7 @@ button:hover {
         width: 100vW;
         height: auto;
     }
-    main .bannerHome {
-        width: 100%;
-        object-fit: cover;
-
-    }
+   
 
     .form{
       margin: auto;
@@ -679,7 +661,7 @@ button:hover {
 }
 
 #menu.scrolled {
-    background-color: var(--secondary-color) /* Color del menú después del scroll */
+    background-color: transparent /* Color del menú después del scroll */
   }
 
 
